@@ -8,10 +8,8 @@ import { siteConfig } from '@/lib/config'
  * 通知横幅
  */
 export function NoticeBar() {
-  let notices = siteConfig('HEO_NOTICE_BAR', null, CONFIG)
-  if (typeof notices === 'string') {
-    notices = JSON.parse(notices)
-  }
+  const notices = siteConfig('HEO_NOTICE_BAR', null, CONFIG)
+
   if (!notices || notices?.length === 0) {
     return <></>
   }
